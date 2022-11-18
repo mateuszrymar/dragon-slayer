@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The dragon slayer game</title>
+</head>
+<body>
+
+  <script>
+    var battleOutcome = Math.ceil(Math.random()*100);
+ 
+    var name = prompt ("What is your name, brave adventurer?");
+    var wannaPlay = confirm("Hello, " + name + " Would you dare to play?");
+    
+
+    if(wannaPlay) {
+      var battle = confirm("Would you like to battle the dragon?");
+      if (battle)   {
+        var result = battleOutcome >= 50 ? "GLORIOUS VICTORY!!! \n" + name + " has slain a dragon." : name + " has been slain by the dragon.";
+        alert(result);
+      } else {
+        alert("You chickened out at the very last moment.");
+      }
+        // if (battleOutcome >= 50) {
+        //   alert ("GLORIOUS VICTORY!!! \n" + name + " has slain a dragon.");
+        // } else {
+        //   alert (name + " has been slain by the dragon.");
+        // }
+    } else {
+      alert ("Come back, when you're brave enough.");
+    }
+
+
+  </script>
+  
+</body>
+</html>
